@@ -33,13 +33,19 @@ namespace FunctionApp1
             dynamic data = JsonConvert.DeserializeObject(requestBody);
             name = name ?? data?.name;
 
+            if (string.IsNullOrEmpty(name))
+            {
+                log.LogError("Name cannot be empty!");
+                return new BadRequestObjectResult("Server error");
+            }
+
             var entity = new TableEntity
             {
                 PartitionKey = "partition",
                 RowKey = name
             };
 
-            entity["last-visit"] = DateTime.UtcNow.ToString();
+            entity["LastVisit"] = DateTime.UtcNow.ToString();
             await tableClient.UpsertEntityAsync(entity);
 
             string responseMessage = string.IsNullOrEmpty(name)
