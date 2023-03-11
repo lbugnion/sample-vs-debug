@@ -1,0 +1,5 @@
+POST http://localhost:7139/api/Function1
+
+{
+    "name": "Laurent from REST Client"
+}
