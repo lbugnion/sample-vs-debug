@@ -11,7 +11,7 @@
       }
     },
     "logLevel": {
-      "SimpleFunction": "Trace",
+      "SimpleFunction": "Information",
       "default": "None"
     }
   }
