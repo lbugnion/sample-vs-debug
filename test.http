@@ -1,6 +1,6 @@
 POST {{apiurl}}/api/SimpleFunction
-x-functions-key: i43c-XkoftxoU37DF_SDZfVU9H9S2JJLjuHZbR_LsdRwAzFuVFmamA==
+x-functions-key: {{SimpleFunctionKey}}
 
 {
-    "name": "Laurent/Robert"
+    "name": "Laurent from REST Client"
 }
