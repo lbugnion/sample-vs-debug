@@ -55,7 +55,6 @@ namespace FunctionApp1
             log.LogInformation("This is an information");
             log.LogDebug("This is debug");
             log.LogTrace("This is a trace");
-            log.LogError("This is an error");
 
             return new OkObjectResult(responseMessage);
         }
