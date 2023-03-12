@@ -52,6 +52,11 @@ namespace FunctionApp1
                 ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
                 : $"Hello, {name}. This HTTP triggered function executed successfully.";
 
+            log.LogInformation("This is an information");
+            log.LogDebug("This is debug");
+            log.LogTrace("This is a trace");
+            log.LogError("This is an error");
+
             return new OkObjectResult(responseMessage);
         }
     }
