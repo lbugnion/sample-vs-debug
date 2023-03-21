@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Azure.Data.Tables;
 using System;
+using SimpleFunction.Model;
 
 namespace FunctionApp1
 {
@@ -39,13 +40,12 @@ namespace FunctionApp1
                 return new BadRequestObjectResult("Server error");
             }
 
-            var entity = new TableEntity
+            var entity = new VisitorEntity
             {
-                PartitionKey = "partition",
-                RowKey = name
+                VisitorName = name,
+                LastVisitDateTime = DateTime.UtcNow,
             };
 
-            entity["LastVisit"] = DateTime.UtcNow.ToString();
             await tableClient.UpsertEntityAsync(entity);
 
             string responseMessage = string.IsNullOrEmpty(name)
@@ -53,10 +53,13 @@ namespace FunctionApp1
                 : $"Hello, {name}. This HTTP triggered function executed successfully.";
 
             log.LogInformation("This is an information");
-            log.LogDebug("This is debug");
+            log.LogDebug($"This is debug: {entity.VisitorName}");
             log.LogTrace("This is a trace");
 
-            return new OkObjectResult(responseMessage);
+            //return new OkObjectResult(responseMessage);
+
+            var json = JsonConvert.SerializeObject(entity);
+            return new OkObjectResult(json);
         }
     }
 }
