@@ -56,10 +56,10 @@ namespace FunctionApp1
             log.LogDebug($"This is debug: {entity.VisitorName}");
             log.LogTrace("This is a trace");
 
-            //return new OkObjectResult(responseMessage);
+            return new OkObjectResult(responseMessage);
 
-            var json = JsonConvert.SerializeObject(entity);
-            return new OkObjectResult(json);
+            //var json = JsonConvert.SerializeObject(entity);
+            //return new OkObjectResult(json);
         }
     }
 }
