@@ -58,16 +58,6 @@ namespace FunctionApp1
                 log.LogError(ex, "Error while inserting entity");
                 return new BadRequestObjectResult("Server error");
             }
-
-            //string responseMessage = string.IsNullOrEmpty(name)
-            //    ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
-            //    : $"Hello, {name}. This HTTP triggered function executed successfully.";
-
-            //log.LogInformation("This is an information");
-            //log.LogDebug($"This is debug: {entity.VisitorName}");
-            //log.LogTrace("This is a trace");
-
-            //return new OkObjectResult(responseMessage);
         }
     }
 }
