@@ -49,6 +49,9 @@ namespace FunctionApp1
                 };
 
                 await tableClient.UpsertEntityAsync(entity);
+
+                var json = JsonConvert.SerializeObject(entity);
+                return new OkObjectResult(json);
             }
             catch (Exception ex)
             {
@@ -56,18 +59,15 @@ namespace FunctionApp1
                 return new BadRequestObjectResult("Server error");
             }
 
-            string responseMessage = string.IsNullOrEmpty(name)
-                ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
-                : $"Hello, {name}. This HTTP triggered function executed successfully.";
+            //string responseMessage = string.IsNullOrEmpty(name)
+            //    ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
+            //    : $"Hello, {name}. This HTTP triggered function executed successfully.";
 
             //log.LogInformation("This is an information");
             //log.LogDebug($"This is debug: {entity.VisitorName}");
             //log.LogTrace("This is a trace");
 
             //return new OkObjectResult(responseMessage);
-
-            var json = JsonConvert.SerializeObject(entity);
-            return new OkObjectResult(json);
         }
     }
 }
