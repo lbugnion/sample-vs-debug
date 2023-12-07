@@ -45,8 +45,6 @@ namespace SimpleFunction.Model
                 CultureInfo.InvariantCulture);
         }
 
-
-
         //public override string ToString()
         //{
         //    return $"{RowKey}: {LastVisitDateTime:ddd dd MM yyyy, HH:mm:ss)}";

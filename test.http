@@ -8,6 +8,21 @@ POST http://localhost:7139/api/SimpleFunction
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ###
 POST {{apiurl}}/api/SimpleFunction
 x-functions-key: {{SimpleFunctionKey}}
@@ -16,7 +31,3 @@ Content-Type: application/json
 {
     "name": ""
 }
-
-###
-GET https://8p6gkghf-7139.euw.devtunnels.ms/api/SimpleFunction?name=Laurent
-x-Tunnel-Authorization: tunnel eyJhbGciOiJFUzI1NiIsImtpZCI6IjkxNzUzNTFFOTA5MEJGNEJFMUJFQUM1RENFMzczNDBFNTE1RkQzRjkiLCJ0eXAiOiJKV1QifQ.eyJjbHVzdGVySWQiOiJldXciLCJ0dW5uZWxJZCI6IjhwNmdrZ2hmIiwic2NwIjoiY29ubmVjdCIsImV4cCI6MTcwMTk1NjcyNywiaXNzIjoiaHR0cHM6Ly90dW5uZWxzLmFwaS52aXN1YWxzdHVkaW8uY29tLyIsIm5iZiI6MTcwMTg2OTQyN30.SAtP-7zq9QjcxhX9ezEBw6lVkjrWZn00w5PrB8lz0fhMu0eBJvWb-xNp1y0ZCpdP8i-XTALojHawn5xQGhd67Q
