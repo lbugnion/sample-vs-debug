@@ -45,6 +45,8 @@ namespace SimpleFunction
                 LastVisitDateTime = DateTime.UtcNow,
             };
 
+            await tableClient.CreateIfNotExistsAsync();
+
             await tableClient.UpsertEntityAsync(entity);
 
             string responseMessage = string.IsNullOrEmpty(name)
