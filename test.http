@@ -1,7 +1,7 @@
-GET http://localhost:7139/api/SimpleFunction?name=Vanch
+GET http://localhost:7295/api/SimpleFunction?name=Vanch
 
 ###
-POST http://localhost:7139/api/SimpleFunction
+POST http://localhost:7295/api/SimpleFunction
 
 {
     "name": "Visual Studio"
