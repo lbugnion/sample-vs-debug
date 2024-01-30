@@ -41,6 +41,11 @@ namespace SimpleFunction
                 return new BadRequestObjectResult("Server error");
             }
 
+            if (name == "crash")
+            {
+                throw new Exception("Crash!");
+            }
+
             var entity = new VisitorEntity
             {
                 VisitorName = name,

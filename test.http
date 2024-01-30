@@ -29,5 +29,5 @@ x-functions-key: {{SimpleFunctionKey}}
 Content-Type: application/json
 
 {
-    "name": "Laurent"
+    "name": ""
 }
