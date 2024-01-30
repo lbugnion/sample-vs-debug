@@ -1,6 +1,33 @@
-POST {{apiurl}}/api/SimpleFunction
-x-functions-key: {{SimpleFunctionKey}}
+GET http://localhost:7139/api/SimpleFunction?name=Vanch
+
+###
+POST http://localhost:7139/api/SimpleFunction
 
 {
-    "name": "Laurent again"
+    "name": "Visual Studio"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+POST {{apiurl}}/api/SimpleFunction
+x-functions-key: {{SimpleFunctionKey}}
+Content-Type: application/json
+
+{
+    "name": ""
 }
