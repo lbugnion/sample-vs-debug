@@ -1,8 +1,8 @@
 {
   "profiles": {
-    "FunctionApp1": {
+    "SimpleFunction": {
       "commandName": "Project",
-      "commandLineArgs": "--port 7139",
+      "commandLineArgs": "--port 7295",
       "launchBrowser": false
     }
   }
